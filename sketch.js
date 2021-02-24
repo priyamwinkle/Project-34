@@ -8,13 +8,14 @@ function preload(){
 function setup() {
 	  createCanvas(500,500);
 
-    database=firebase.database
+    database=firebase.database();
 
     foodStock=database.ref("food");
     foodStock.on("value",readStock)
 
     dog=createSprite(250,300,50,50);
     dog.addImage(dogImg);
+    dog.scale=0.3
 
 }
 
@@ -24,10 +25,12 @@ function draw() {
 
     if(keyWentDown(UP_ARROW)){
         writeStock(foodS);
-        happyDog.addImage(happyDogImg);
+        dog.addImage(happyDogImg);
     }
   
     drawSprites();
+
+    text()
 }
 
 function readStock(data){
