@@ -29,8 +29,9 @@ function draw() {
     }
   
     drawSprites();
-
-    text()
+    textSize(30);
+    fill("red");
+    text("Food remaining:"+foodStock,-500,180);
 }
 
 function readStock(data){
