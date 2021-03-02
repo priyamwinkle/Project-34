@@ -32,7 +32,7 @@ function draw() {
     textSize(13);
     fill("red");
     text("Food remaining:"+foodS,170,200);
-    text("Note:Press UP ARROW key to feed the dog");
+    text("Note:Press UP ARROW key to feed the dog",130,10,300,20);
 }
 
 function readStock(data){
