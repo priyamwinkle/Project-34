@@ -29,9 +29,10 @@ function draw() {
     }
   
     drawSprites();
-    textSize(30);
+    textSize(13);
     fill("red");
-    text("Food remaining:"+foodStock,-500,180);
+    text("Food remaining:"+foodS,170,200);
+    text("Note:Press UP ARROW key to feed the dog");
 }
 
 function readStock(data){
