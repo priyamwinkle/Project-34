@@ -10,7 +10,7 @@ function setup() {
 
     database=firebase.database();
 
-    foodStock=database.ref("food");
+    foodStock=database.ref("Food");
     foodStock.on("value",readStock)
 
     dog=createSprite(250,300,50,50);
@@ -41,7 +41,7 @@ function readStock(data){
 
 function writeStock(x){
 
-    if(x<0){
+    if(x<=0){
       x=0;
     }
     else{
@@ -52,6 +52,3 @@ function writeStock(x){
         Food:x
     })
 }
-
-
-
